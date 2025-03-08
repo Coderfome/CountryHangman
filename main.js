@@ -57,14 +57,14 @@ function letterPush(letter){
     lettersdone.push(letter)
     if (mistakes == 7){
             showModal('infoModal')
-            infoModalText.innerText = 'Game Over. The correct answer was ' + ans + '. Click outside for a new challenge.'
+            infoModalText.innerText = 'Game Over. The correct answer was ' + ans + '. Click OK for a new challenge.'
             generate()
         
     }
     if (!attemptA.includes('_')){
         setTimeout(() => {
             showModal('infoModal')
-            infoModalText.innerText = 'You win. Click outside for a new challenge.'
+            infoModalText.innerText = 'You win. Click OK for a new challenge.'
             generate()
         }, 1000);
         

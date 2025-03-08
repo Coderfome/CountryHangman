@@ -16,6 +16,10 @@ function showModal(modalId){
     buttons.forEach(button => {
         button.disabled = true
     });
+    closeButtons = document.querySelectorAll('.closeBtn')
+    closeButtons.forEach(button => {
+        button.disabled = false
+    })
     }, 1)
     
 }

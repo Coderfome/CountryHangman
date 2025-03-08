@@ -23,11 +23,6 @@
             <button class="navBtn">Github</button>
             <button class="navBtn" id="howToPlayBtn" onclick="toggleModal('howToPlay')">?</button> 
         </span>
-        
-        
-        
-        
-
     </nav>
 
 
@@ -77,8 +72,9 @@
     </div>
  
     <div id="howToPlay" class="modal">
+        <button class="regBtn closeBtn" style="float: right;" onclick="hideModal('howToPlay')">X</button>
         <p>TIP: If the page has a lot of empty space, zoom in!</p>
-
+        
         <h1 class="title">How To Play</h1>
         <ul>
             <li>You have to guess the mystery country, generated randomly.</li>
@@ -102,7 +98,9 @@
     </div>
 
     <div class="modal" id="infoModal">
+        
         <p id="infoModalText"></p>
+        <button class="regBtn closeBtn" style="float: right;" onclick="hideModal('infoModal')">OK</button>
     </div>
 
     <div class="notification" id="alreadyGuessedNotify">
