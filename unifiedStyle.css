@@ -114,6 +114,14 @@ nav{
     animation: slide-down 0.5s;
 }
 
+.bigScreen{
+    display: inline-block;
+}
+
+.smallScreen{
+    display: none;
+}
+
 @keyframes slide-down{
     0%{
         top: 0;
@@ -143,4 +151,8 @@ nav{
     #nav .bigScreen{
         display: none;
     }
+    #nav .smallScreen{
+        display: inline-block;
+    }
+    
 }

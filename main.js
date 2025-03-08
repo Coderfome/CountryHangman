@@ -57,7 +57,7 @@ function letterPush(letter){
     lettersdone.push(letter)
     if (mistakes == 7){
             showModal('infoModal')
-            infoModalText.innerText = 'Game Over. The correct answer was ' + ans + '. Click OK for a new challenge.'
+            infoModalText.innerHTML = 'Game Over. The correct answer was <b>' + ans + '</b>. Click OK for a new challenge.'
             generate()
         
     }
