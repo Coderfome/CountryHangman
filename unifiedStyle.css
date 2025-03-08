@@ -147,12 +147,16 @@ nav{
     transition: 0.3s ease-in-out;
 }
 
+
+
 @media screen and (max-width: 600px){
+    #nav{
+        display: block;
+    }
     #nav .bigScreen{
         display: none;
     }
     #nav .smallScreen{
         display: inline-block;
-    }
-    
+    }   
 }
