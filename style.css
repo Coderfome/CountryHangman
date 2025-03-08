@@ -1,0 +1,70 @@
+
+
+li{
+    font-size: 20px;
+}
+
+#howToPlayBtn{
+    float: right;
+    margin: 0 1rem 0 0;
+}
+
+#infoModal{
+    padding: 1rem;
+    width: auto;
+    height: auto;
+
+}
+
+
+
+img{
+    height: 30vh;
+}
+
+.keyboard{
+    display: flex;
+    width: calc(100% - 2rem);
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0;
+}
+
+.letterBtn{
+    padding: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    outline: 1px solid light-dark(var(--lightForeground1), var(--darkForeground1));
+}
+
+@media (max-width: 32.75rem){
+    .main{
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    .keyboard{
+        width: 100%;
+    }
+    .letterBtn{
+        padding: 1rem 0 1rem 0;
+        font-size: 1rem;
+        width: 10%;
+        gap: 0;
+    }
+    .row1{
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    .row2{
+        flex-grow: 0.8;
+        flex-shrink: 0.8;
+    }
+    .row3{
+        flex-grow: 0.7;
+        flex-shrink: 0.7;
+    }
+}

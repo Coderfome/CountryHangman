@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Country Hangman</title>
+    <link rel="stylesheet" href="unifiedStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="unifiedScript.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body onload="generate()">
+    
+    <nav id="nav">
+        <span class="navTitle">Country Hangman</span> 
+        <span class="bigScreen">
+            <button class="navBtn" onclick='window.location = "https://google.com"'>Home</button>
+            <button class="navBtn active">Projects</button>
+            <button class="navBtn">Github</button>
+            <button class="navBtn" id="howToPlayBtn" onclick="toggleModal('howToPlay')">?</button> 
+        </span>
+        
+        
+        
+        
+
+    </nav>
+
+
+    
+    <div class="main" id="main">
+    <div class="game" id="game"> 
+    <center>
+    <p id="attempt"></p><br>
+   
+    <img src="0.png" alt="An error occured. Please refresh the page." id="hangman"><br>
+    </center>
+    <table>
+        <div class="keyboard">
+            <button class="regBtn letterBtn row1" onclick="letterPush('Q')">Q</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('W')">W</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('E')">E</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('R')">R</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('T')">T</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('Y')">Y</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('U')">U</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('I')">I</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('O')">O</button>
+            <button class="regBtn letterBtn row1" onclick="letterPush('P')">P</button>
+        </div>
+        <div class="keyboard">
+            <button class="regBtn letterBtn row2" onclick="letterPush('A')">A</button>
+            <button class="regBtn letterBtn row2" onclick="letterPush('S')">S</button>
+            <button class="regBtn letterBtn row2" onclick="letterPush('D')">D</button>
+            <button class="regBtn letterBtn row2" onclick="letterPush('F')">F</button>
+            <button class="regBtn letterBtn row2" onclick="letterPush('G')">G</button>
+            <button class="regBtn letterBtn row2" onclick="letterPush('H')">H</button>
+            <button class="regBtn letterBtn row2" onclick="letterPush('J')">J</button>
+            <button class="regBtn letterBtn row2" onclick="letterPush('K')">K</button>
+            <button class="regBtn letterBtn row3" onclick="letterPush('L')">L</button>
+        </div>
+        <div class="keyboard">
+            <button class="regBtn letterBtn row3" onclick="letterPush('Z')">Z</button>
+            <button class="regBtn letterBtn row3" onclick="letterPush('X')">X</button>
+            <button class="regBtn letterBtn row3" onclick="letterPush('C')">C</button>
+            <button class="regBtn letterBtn row3" onclick="letterPush('V')">V</button>
+            <button class="regBtn letterBtn row3" onclick="letterPush('B')">B</button>
+            <button class="regBtn letterBtn row3" onclick="letterPush('N')">N</button>
+            <button class="regBtn letterBtn row3" onclick="letterPush('M')">M</button>
+        </div class="keyboard">
+    </table>
+    </div>
+    </div>
+ 
+    <div id="howToPlay" class="modal">
+        <p>TIP: If the page has a lot of empty space, zoom in!</p>
+
+        <h1 class="title">How To Play</h1>
+        <ul>
+            <li>You have to guess the mystery country, generated randomly.</li>
+            <li>The blanks(_) at the top signify the number of letters in the country's name.</li>
+            <li>If the country has more than one word, the words are separated by a slash(/).</li>
+            <li>If you think a particular letter is in the answer, click on it, or press the button on the keyboard.</li>
+            <li>If it is indeed in the answer, then the position of the letter amongst the other letters and blanks will be shown at the top.</li>
+            <li>If, however, that letter is not in the answer, then the picture of the hangman will gain a body part.</li>
+            <li>If the picture of the hangman is completed, which will be after seven incorrect guesses, then you lose.</li>
+        </ul>
+        <h2>Important: Keep in Mind</h2>
+        <ul>
+            <li>All the 193 UN member countries + <b>TAIWAN</b>, <b>PALESTINE</b> and <b>VATICAN CITY</b> are included.</li>
+            <li>The <b>ENGLISH</b> name for all the countries has been used. Eg - Türkiye is written as <b>TURKEY</b>, Côte d'Ivoire is written as <b>IVORY COAST</b>, Cabo Verde is written as <b>CAPE VERDE</b>, and Timor-Leste is written as <b>EAST TIMOR</b>. Any accent marks or symbols atop letters that are not in English are excluded.</li>
+            <li>The most used names of the countries are used, not the full name. Eg - United Kingdom of Great Britain and Northern Ireland is written as <b>UNITED KINGDOM</b>. </li>
+            <li>All <b>'THE's</b> at the beginning of country names have been omitted.</li>
+            <li>Country abbreviations are not used. It is not USA, it is <b>UNITED STATES OF AMERICA</b>. </li>
+            <li>Since there are two Congos, the official names of both have been used: <b>REPUBLIC OF THE CONGO</b> and <b>DEMOCRATIC REPUBLIC OF THE CONGO</b>.</li>
+            <li>The two Koreas are written as <b>NORTH KOREA</b> and <b>SOUTH KOREA</b>.</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="infoModal">
+        <p id="infoModalText"></p>
+    </div>
+
+    <div class="notification" id="alreadyGuessedNotify">
+        <p id="notificationText">Already Guessed</p>
+    </div>
+   
+
+
+
+    <!-- Script -->
+     <script src="main.js"></script>
+</body>
+</html>
