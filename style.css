@@ -1,4 +1,6 @@
-
+body{
+    overflow-x: hidden;
+}
 
 li{
     font-size: 20px;
