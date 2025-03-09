@@ -1,6 +1,6 @@
 <h1>Country Hangman</h1>
 A simple, unlimited, and randomised game of hangman featuring countries
- <h1 class="title">How To Play</h1>
+ <h2 class="title">How To Play</h2>
         <ul>
             <li>You have to guess the mystery country, generated randomly.</li>
             <li>The blanks(_) at the top signify the number of letters in the country's name.</li>
