@@ -42,6 +42,8 @@ img{
     outline: 1px solid light-dark(var(--lightForeground1), var(--darkForeground1));
 }
 
+
+
 @media (max-width: 32.75rem){
     .main{
         padding-left: 0;

@@ -49,11 +49,6 @@ nav{
     transition: 0.3s ease-in-out;
 }
 
-.navBtn:hover{
-    color: light-dark(var(--lightBackground), var(--darkBackground));
-    background-color: light-dark(var(--lightForeground1), var(--darkForeground1));
-}
-
 .active{
     background-color: light-dark(var(--lightForeground2,), var(--darkForeground2));
 }
@@ -86,14 +81,14 @@ nav{
     font-family: inherit;
 }
 
-.regBtn:hover{
+.regBtn:hover, .navBtn:hover{
     color: light-dark(var(--lightBackground), var(--darkBackground));
     background-color: light-dark(var(--lightForeground1), var(--darkForeground1));
 }
 
 .regBtn:hover:disabled{
     background-color: light-dark(var(--lightForeground3), var(--darkForeground3));
-    color: light-dark(var(--lightForeground1), var(--darkForeground1));
+    color: light-dark(var(--lightForeground1), var(--darkForeground1))
 }
 
 .modal{
@@ -159,4 +154,16 @@ nav{
     #nav .smallScreen{
         display: inline-block;
     }   
+}
+
+@media (pointer: coarse), (pointer: none){
+    #nav .navBtn{
+        background-color: transparent;
+        transition: none;    
+    }
+
+    .regBtn:hover{
+        background-color: light-dark(var(--lightForeground3), var(--darkForeground3));
+        color: light-dark(var(--lightForeground1), var(--darkForeground1)) 
+    }
 }
