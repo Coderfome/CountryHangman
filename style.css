@@ -1,7 +1,6 @@
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
-
 
 li{
     font-size: 20px;
@@ -27,12 +26,11 @@ img{
 
 .keyboard{
     display: flex;
-    width: calc(100vw - 2rem);
+    width: calc(100% - 2rem);
     justify-content: center;
     flex-wrap: wrap;
     gap: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 .letterBtn{
@@ -53,7 +51,7 @@ img{
         width: 100%;
     }
     .keyboard{
-        width: 100vw;
+        width: 100%;
     }
     .letterBtn{
         padding: 1rem 0 1rem 0;
