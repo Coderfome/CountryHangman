@@ -28,7 +28,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: light-dark(var(--lightForeground3), var(--darkForeground3));
     font-size: inherit;
     word-wrap: break-word;
