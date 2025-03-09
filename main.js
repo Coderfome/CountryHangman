@@ -76,7 +76,7 @@ function letterPush(letter){
 }
 
 document.addEventListener('keydown', e=>{
-    hideAllModals()
+    hideAllModals()    
     if(e.key == 'a' || e.key == 'A'){
         letterPush('A')
     }
