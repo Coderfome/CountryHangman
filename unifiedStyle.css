@@ -17,7 +17,6 @@ body{
     color: light-dark(var(--lightForeground1), var(--darkForeground1));
     font-family: 'Open Sans';
     font-size: 1.3rem;
-    
 }
 
 ::selection{
@@ -28,11 +27,12 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: light-dark(var(--lightForeground3), var(--darkForeground3));
     font-size: inherit;
     word-wrap: break-word;
     font-family: inherit;
+    height: 4rem;
 }
 
 
@@ -47,6 +47,7 @@ nav{
     font-family: inherit;
     padding: 1rem;
     transition: 0.1s ease-in-out;
+    width: auto;
 }
 
 .active{
@@ -54,10 +55,11 @@ nav{
 }
 
 .main{
-    padding: 3rem 1rem 0 1rem;
+    padding: 0;
     word-wrap: break-word;
     width: 100%;
-    height: calc(100% - 2rem);
+    height: calc(100% - 4rem);
+    margin-top: 4rem;
     font-family: inherit;
 }
 
@@ -141,6 +143,7 @@ nav{
     display: none;
     transition: 0.3s ease-in-out;
 }
+  
 
 
 
@@ -150,6 +153,21 @@ nav{
     }
     #nav .bigScreen{
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        background-color: light-dark(var(--lightForeground3), var(--darkForeground3));
+    }
+ 
+
+    .bigScreen .navBtn, .navTitle{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        display: inline-block;
     }
     #nav .smallScreen{
         display: inline-block;
@@ -157,11 +175,7 @@ nav{
 }
 
 @media (pointer: coarse){
-    #nav .navBtn{
-        transition: none;    
-    }
-
-    .regBtn:hover{
+    button{
         transition: none;
     }
 }
