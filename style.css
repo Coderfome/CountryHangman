@@ -72,3 +72,22 @@ img{
         flex-shrink: 0.7;
     }
 }
+
+.rotatePrompt{
+    display: none;
+}
+
+@media (max-height: 30.1875rem){
+    .main{
+        display: none;
+    }
+    #nav{
+        display: none;
+    }
+    .modal{
+        display: none
+    }
+    .rotatePrompt{
+        display: block;
+    }
+}
