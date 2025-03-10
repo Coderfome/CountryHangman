@@ -16,16 +16,8 @@
 <body onload="generate()">
     
     <nav id="nav">
-        <span class="bigScreen">
-            <span class="navTitle">Country Hangman</span> 
-            <button class="navBtn">Home</button>
-            <button class="navBtn">Projects</button>
-            <button class="navBtn">Github</button>        
-        </span>
-        <span class="smallScreen">
-            <button class="navBtn" onclick="openFullNav()">...</button>
-        </span>
-        <button class="navBtn" id="howToPlayBtn" title="How to Play">?</button> 
+    
+        <button class="navBtn" id="howToPlayBtn" title="How to Play" onclick="showModal()">?</button> 
     </nav>
 
 
@@ -73,10 +65,11 @@
     </div>
     <p style="position: absolute; bottom: 0; left: 10px">Work in Progress</p>
     </div>
- 
-    <div id="howToPlay" class="modal">
-        <button class="regBtn closeBtn" style="float: right;">X</button>
-        <p>TIP: If the page has a lot of empty space, zoom in!</p>
+    
+    
+
+    <div class="modal" id="howToPlay">
+        <button class="regBtn closeBtn" style="float: right;" onclick="hideModal()">X</button>
         
         <h1 class="title">How To Play</h1>
         <ul>
@@ -100,19 +93,11 @@
         </ul>
     </div>
 
-    <div class="modal" id="infoModal">
-        
-        <p id="infoModalText"></p>
-        <button class="regBtn closeBtn" style="float: right;" onclick="hideModal('infoModal')">OK</button>
-    </div>
 
     <div class="notification" id="alreadyGuessedNotify">
         <p id="notificationText">Already Guessed</p>
     </div>
-    
-    <div class="rotatePrompt">
-        <p>Please rotate your device. If the issue persists after rotating, use a bigger device.</p>
-    </div>
+
 
 </body>
 </html>

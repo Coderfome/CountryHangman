@@ -11,6 +11,15 @@ function openFullNav(){
     document.querySelector('.bigScreen').style.display = 'block';
 }
 
+function showModal(){
+    document.querySelector('#howToPlay').style.display = 'block'
+}
+
+function hideModal(){
+    document.querySelector('#howToPlay').style.display = 'none'
+}
+
+
 
 
 
@@ -84,6 +93,7 @@ function letterPush(letter){
 }
 
 document.addEventListener('keydown', e=>{
+    hideModal()
     if(e.key == 'a' || e.key == 'A'){
         letterPush('A')
     }
