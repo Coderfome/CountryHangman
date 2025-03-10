@@ -145,47 +145,6 @@ nav{
 }
   
 
-
-
-@media screen and (max-width: 37.5rem){
-    #nav{
-        display: block;
-    }
-    #nav .bigScreen{
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-        background-color: light-dark(var(--lightForeground3), var(--darkForeground3));
-    }
- 
-
-    .bigScreen .navBtn, .navTitle{
-        width: 100%;
-        height: auto;
-        text-align: center;
-        display: inline-block;
-    }
-    #nav .smallScreen{
-        display: inline-block;
-    }   
-}
-
-@media (pointer: coarse){
-    button{
-        transition: none;
-    }
-}
-
-
-
-
-
-
-
 li{
     font-size: 20px;
 }
@@ -227,6 +186,10 @@ img{
 }
 
 
+.rotatePrompt{
+    display: none;
+}
+
 
 @media (max-width: 32.75rem){
     .main{
@@ -257,10 +220,6 @@ img{
     }
 }
 
-.rotatePrompt{
-    display: none;
-}
-
 @media (max-height: 30.1875rem){
     .main{
         display: none;
@@ -273,5 +232,38 @@ img{
     }
     .rotatePrompt{
         display: block;
+    }
+}
+
+@media screen and (max-width: 37.5rem){
+    #nav{
+        display: block;
+    }
+    #nav .bigScreen{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        background-color: light-dark(var(--lightForeground3), var(--darkForeground3));
+    }
+ 
+
+    .bigScreen .navBtn, .navTitle{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        display: inline-block;
+    }
+    #nav .smallScreen{
+        display: inline-block;
+    }   
+}
+
+@media (pointer: coarse){
+    button{
+        transition: none;
     }
 }
